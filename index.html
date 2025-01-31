@@ -53,7 +53,7 @@
 <body class="sora">
 
     <!-- header section -->
-    <header>
+    <header class="relative">
         <nav class="bg-pink-bg py-3 px-4 lg:px-0 text-title-color">
             <!-- navbar main container -->
             <div class="max-w-screen-lg mx-auto flex items-center justify-between">
@@ -91,20 +91,34 @@
             </div>
         </nav>
 
+        <!-- marquee -->
+        <div class=" max-w-screen-lg mx-auto mt-2 px-4 lg:px-0">
+            <marquee behavior="scroll" direction="left" scrollamount="5" class="text-title-color">
+                🐶 Adopt a Pet Today! | 🐱 Find Your Furry Friend! | 🦜 Loving Homes Needed!
+                🐶 Adopt a Pet Today! | 🐱 Find Your Furry Friend! | 🦜 Loving Homes Needed!
+                🐶 Adopt a Pet Today! | 🐱 Find Your Furry Friend! | 🦜 Loving Homes Needed!
+            </marquee>
+        </div>
+
         <!-- hero section -->
         <section class="max-w-screen-lg mx-auto">
             <!-- hero main container -->
             <!-- small device -->
             <div class="md:hidden relative pb-20">
                 <!-- text contend -->
-                <div class="px-5 lg:px-0 my-10">
+                <div class="px-5 lg:px-0 mt-5 mb-10">
                     <h1 class="adlam text-3xl md:text-5xl font-bold">Pamper Your Pet, <br> Because They Deserve <br>
                         the Bes</h1>
                     <p class="text-sm text-description-color md:w-3/5 mt-5 mb-3">Discover a world of treats, toys,
                         and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
-                    <button
-                        class="px-3 py-2 rounded-lg bg-btn-bg border border-btn-bg hover:text-white-color duration-200">Find
-                        a pet</button>
+                    <div class="relative inline-block cursor-pointer ">
+                        <button
+                            class="px-3 py-2 rounded-lg bg-btn-bg border border-btn-bg hover:text-white-color duration-200 shadow-lg">
+                            Find a Pet 🐶
+                        </button>
+                        <span class="absolute top-0 left-0 w-full h-full bg-btn-bg opacity-50 rounded-lg animate-ping">
+                        </span>
+                    </div>
                 </div>
                 <!-- img contend -->
                 <div class="w-full absolute bottom-0">
@@ -114,21 +128,33 @@
             <!-- more than small device -->
             <div class="w-full h-[calc(100vh-70px)] text-title-color hidden md:block">
                 <div
-                    class="h-full w-full bg-[url('./c1-assets/cat_big_rbg.png')] bg-no-repeat bg-right-bottom md:bg-center bg-contain flex items-center">
+                    class="h-full w-full bg-[url('./c1-assets/cat_big_rbg.png')] bg-no-repeat bg-right-bottom bg-contain flex items-center">
                     <!-- contend box -->
                     <div class="px-5 lg:px-0">
                         <h1 class="adlam text-3xl md:text-5xl font-bold">Pamper Your Pet, <br> Because They Deserve <br>
                             the Bes</h1>
                         <p class="text-sm text-description-color md:w-3/5 mt-5 mb-3">Discover a world of treats, toys,
                             and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
-                        <button
-                            class="px-3 py-2 rounded-lg bg-btn-bg border border-btn-bg hover:text-white-color duration-200">Find
-                            a pet</button>
+                        <div class="relative inline-block cursor-pointer ">
+                            <button
+                                class="px-3 py-2 rounded-lg bg-btn-bg border border-btn-bg hover:text-white-color duration-200 shadow-lg">
+                                Find a Pet 🐶
+                            </button>
+                            <span
+                                class="absolute top-0 left-0 w-full h-full bg-btn-bg opacity-50 rounded-lg animate-ping">
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
     </header>
+
+
+
+
 
     <!-- main section -->
     <main>
