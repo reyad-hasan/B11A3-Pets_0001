@@ -94,11 +94,29 @@
         <!-- hero section -->
         <section class="max-w-screen-lg mx-auto">
             <!-- hero main container -->
-            <div class="w-full h-[calc(100vh-70px)] text-title-color">
+            <!-- small device -->
+            <div class="md:hidden relative pb-20">
+                <!-- text contend -->
+                <div class="px-5 lg:px-0 mt-3">
+                    <h1 class="adlam text-3xl md:text-5xl font-bold">Pamper Your Pet, <br> Because They Deserve <br>
+                        the Bes</h1>
+                    <p class="text-sm text-description-color md:w-3/5 mt-5 mb-3">Discover a world of treats, toys,
+                        and essentials handpicked for your furry friends. Shop now and make tails wag with joy!</p>
+                    <button
+                        class="px-3 py-2 rounded-lg bg-btn-bg border border-btn-bg hover:text-white-color duration-200">Find
+                        a pet</button>
+                </div>
+                <!-- img contend -->
+                <div class="w-full absolute bottom-0">
+                    <img src="./c1-assets/cat_big_rbg.png" alt="">
+                </div>
+            </div>
+            <!-- more than small device -->
+            <div class="w-full h-[calc(100vh-70px)] text-title-color hidden md:block">
                 <div
                     class="h-full w-full bg-[url('./c1-assets/cat_big_rbg.png')] bg-no-repeat bg-right-bottom md:bg-center bg-contain flex items-center">
                     <!-- contend box -->
-                    <div class="px-5 lg:px-0 mb-16 md:mb-0">
+                    <div class="px-5 lg:px-0">
                         <h1 class="adlam text-3xl md:text-5xl font-bold">Pamper Your Pet, <br> Because They Deserve <br>
                             the Bes</h1>
                         <p class="text-sm text-description-color md:w-3/5 mt-5 mb-3">Discover a world of treats, toys,
