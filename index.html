@@ -32,7 +32,16 @@
           --color-gradient2-color: #ACD2FD;
         }
         .primary-btn{
-            @apply px-5 py-2 text-title-color bg-btn-bg rounded-lg hover:text-white-color cursor-pointer duration-200
+            @apply px-5 py-2 text-title-color bg-btn-bg rounded-lg hover:text-white-color cursor-pointer duration-200 border border-btn-bg
+        }
+        .secondary-btn{
+            @apply border border-btn-bg px-5 py-2 rounded-lg text-title-color hover:text-btn-bg cursor-pointer duration-200
+        }
+        .hover{
+            @apply cursor-pointer hover:text-btn-bg duration-200
+        }
+        .flexx{
+            @apply flex items-center justify-between
         }
       </style>
 </head>
@@ -41,6 +50,38 @@
 
     <!-- header section -->
     <header>
+        <!-- nav section -->
+        <nav class="bg-pink-bg p-3 text-title-color">
+            <!-- nav main container -->
+            <div class="max-w-screen-lg mx-auto flexx">
+                <!-- logo box -->
+                <div class="flexx gap-2 cursor-pointer">
+                    <img class="w-4/5" src="./c1-assets/logo-header.png" alt="logo-header png">
+                    <h3 class="text-lg hidden md:block">Browse<span class="text-btn-bg">4</span>Pets</h3>
+                </div>
+                <!-- menu list box -->
+                <div class="hidden md:block">
+                    <ul class="flexx gap-7">
+                        <li class="hover"><a href="#">Find a pet</a></li>
+                        <li class="hover"><a href="#">Breeds</a></li>
+                        <li class="hover"><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <!-- login box -->
+                <div class=" hidden md:block">
+                    <div class="flexx gap-3">
+                        <i class="fa-regular fa-bell text-base hover"></i>
+                        <i class="fa-solid fa-magnifying-glass text-base mx-1 hover"></i>
+                        <button class="secondary-btn">Login</button>
+                        <button class="primary-btn">Register</button>
+                    </div>
+                </div>
+                <!-- hamburg icon box -->
+                <div class="md:hidden">
+                    <i class="fa-solid fa-bars text-3xl text-title-color hover"></i>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- main section -->
