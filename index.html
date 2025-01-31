@@ -15,124 +15,81 @@
     <!-- font awesome cdn link -->
     <script src="https://kit.fontawesome.com/cd6c7339f0.js" crossorigin="anonymous"></script>
     <!-- tailwind cdn link -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- tailwind customize style -->
-    <style type="text/tailwindcss">
-        @theme {
-          --font-ADLaM: ADLaM Display, serif;
-          --font-sora: Sora, serif;
-          --color-pink-bg: #fff9f4;
-          --color-btn-bg: #ffdc26;
-          --color-card-bg: #f9df8a;
-          --color-footer-bg: #ffed92;
-          --color-title-color: #111111;
-          --color-description-color: #595959;
-          --color-white-color: #ffffff;
-          --color-gradient1-color: #F8CCFB;
-          --color-gradient2-color: #ACD2FD;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pink-bg': '#fff9f4',
+                        'btn-bg': '#ffde26',
+                        'card-bg': '#f9df8a',
+                        'footer-bg': '#ffed92',
+                        'title-color': '#111111',
+                        'description-color': '#595959',
+                        'white-color': '#ffffff',
+                        'gradient1-color': '#f8ccfb',
+                        'gradient2-color': '#acd2fd',
+                        'gradient3-color': '#fef3db',
+                        'gradient4-color': '#fae298',
+                    }
+                }
+            }
         }
-        .primary-btn{
-            @apply px-5 py-2 text-title-color bg-btn-bg rounded-lg hover:text-white-color cursor-pointer duration-200 border border-btn-bg
+    </script>
+    <!-- css style here -->
+    <style>
+        .adlam {
+            font-family: "ADLaM Display", serif;
         }
-        .secondary-btn{
-            @apply border border-btn-bg px-5 py-2 rounded-lg text-title-color hover:text-btn-bg cursor-pointer duration-200
+
+        .sora {
+            font-family: "Sora", serif;
         }
-        .hover{
-            @apply cursor-pointer hover:text-btn-bg duration-200
-        }
-        .flexx{
-            @apply flex items-center justify-between
-        }
-        
-      </style>
+    </style>
 </head>
 
-<body class="font-sora">
-
-
-
-
+<body class="sora">
 
     <!-- header section -->
     <header>
-        <!-- nav section -->
-        <nav class="bg-pink-bg py-3 padding text-title-color">
-            <!-- nav main container -->
-            <div class="max-w-screen-lg mx-auto flexx">
+        <nav class="bg-pink-bg py-3 px-4 lg:px-0 text-title-color">
+            <!-- navbar main container -->
+            <div class="max-w-screen-lg mx-auto flex items-center justify-between">
                 <!-- logo box -->
-                <div class="flexx gap-2 cursor-pointer">
-                    <img class="w-4/5" src="./c1-assets/logo-header.png" alt="logo-header png">
-                    <h3 class="text-lg hidden md:block">Browse<span class="text-btn-bg">4</span>Pets</h3>
+                <div>
+                    <a href="#" class="flex items-center gap-2">
+                        <img class="w-9" src="./c1-assets/logo-header.png" alt="logo-header">
+                        <span class="text-lg font-medium hover:scale-105 duration-200 hidden md:block">Browse<span
+                                class="text-btn-bg">4</span>Pets</span>
+                    </a>
                 </div>
                 <!-- menu list box -->
                 <div class="hidden md:block">
-                    <ul class="flexx gap-7">
-                        <li class="hover"><a href="#">Find a pet</a></li>
-                        <li class="hover"><a href="#">Breeds</a></li>
-                        <li class="hover"><a href="#">Contact us</a></li>
+                    <ul class="flex items-center gap-3 lg:gap-8">
+                        <li class="hover:text-btn-bg duration-200"><a href="#">Find a pet</a></li>
+                        <li class="hover:text-btn-bg duration-200"><a href="#">Breeds</a></li>
+                        <li class="hover:text-btn-bg duration-200"><a href="#">Contact us</a></li>
                     </ul>
                 </div>
                 <!-- login box -->
-                <div class=" hidden md:block">
-                    <div class="flexx gap-3">
-                        <i class="fa-regular fa-bell text-base hover"></i>
-                        <i class="fa-solid fa-magnifying-glass text-base mx-1 hover"></i>
-                        <button class="secondary-btn">Login</button>
-                        <button class="primary-btn">Register</button>
+                <div class="md:block hidden">
+                    <div class="flex gap-5 items-center cursor-pointer">
+                        <i class="fa-regular fa-bell hover:text-btn-bg duration-200"></i>
+                        <i class="fa-solid fa-magnifying-glass hover:text-btn-bg duration-200"></i>
+                        <button
+                            class="px-3 py-2 rounded-lg bg-white-bg border border-btn-bg hover:text-btn-bg duration-200">Login</button>
+                        <button
+                            class="px-3 py-2 rounded-lg bg-btn-bg border border-btn-bg hover:text-white-color duration-200">Register</button>
                     </div>
                 </div>
-                <!-- hamburg icon box -->
+                <!-- hamburg box -->
                 <div class="md:hidden">
-                    <i class="fa-solid fa-bars text-3xl text-title-color hover"></i>
+                    <i class="fa-solid fa-bars text-3xl hover:text-btn-bg duration-200"></i>
                 </div>
             </div>
         </nav>
-
-        <!-- hero section -->
-        <section class="max-w-screen-lg mx-auto px-5 lg:px-0 hidden border">
-
-            <!-- md hero section style -->
-            <section
-                class="h-[calc(100vh-128px)] bg-no-repeat bg-center bg-cover md:mt-14 relative overflow-hidden hidden md:block"
-                style="background-image: url(./c1-assets/cat_big_rbg.png);">
-                <!-- hero contend box -->
-                <div class="absolute top-10">
-                    <h1 class="text-3xl md:text-5xl font-ADLaM text-title-color">Pamper Your Pet, <br> Because They
-                        Deserve
-                        <br> the Bes
-                    </h1>
-                    <p class="md:w-3/5 text-description-color my-4 text-sm pr-5">Discover a world of treats, toys, and
-                        essentials
-                        handpicked for your furry friends. Shop now and make tails wag with joy!</p>
-                    <button class="primary-btn">Find a pet</button>
-                </div>
-            </section>
-
-            <!-- small hero section style -->
-            <section class="md:hidden overflow-hidden mt-12">
-                <!-- small main container -->
-                <div>
-                    <div>
-                        <h1 class="text-3xl md:text-5xl font-ADLaM text-title-color">Pamper Your Pet, <br> Because They
-                            Deserve
-                            <br> the Bes
-                        </h1>
-                        <p class="text-description-color my-4 text-sm">Discover a world of treats, toys,
-                            and
-                            essentials
-                            handpicked for your furry friends. Shop now and make tails wag with joy!</p>
-                    </div>
-                    <div class="flex relative -top-10">
-                        <div class="absolute top-7"><button class="primary-btn">Find a pet</button></div>
-                        <div class=""> <img src="./c1-assets/cat-big.png" alt=""></div>
-                    </div>
-                </div>
-            </section>
-
-        </section>
-        <button
-            class="px-5 py-2 text-title-color bg-btn-bg rounded-lg hover:text-white-color cursor-pointer duration-200 border border-btn-bg">hello</button>
-
     </header>
 
     <!-- main section -->
