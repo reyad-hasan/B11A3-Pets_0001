@@ -43,9 +43,7 @@
         .flexx{
             @apply flex items-center justify-between
         }
-        .padding{
-            @apply px-5
-        }
+        
       </style>
 </head>
 
@@ -91,12 +89,12 @@
         </nav>
 
         <!-- hero section -->
-        <section class="max-w-screen-lg mx-auto px-5 lg:px-0">
+        <section class="max-w-screen-lg mx-auto px-5 lg:px-0 hidden border">
 
             <!-- md hero section style -->
             <section
                 class="h-[calc(100vh-128px)] bg-no-repeat bg-center bg-cover md:mt-14 relative overflow-hidden hidden md:block"
-                style="background-image: url(./c1-assets/cat-big.png);">
+                style="background-image: url(./c1-assets/cat_big_rbg.png);">
                 <!-- hero contend box -->
                 <div class="absolute top-10">
                     <h1 class="text-3xl md:text-5xl font-ADLaM text-title-color">Pamper Your Pet, <br> Because They
@@ -132,6 +130,8 @@
             </section>
 
         </section>
+        <button
+            class="px-5 py-2 text-title-color bg-btn-bg rounded-lg hover:text-white-color cursor-pointer duration-200 border border-btn-bg">hello</button>
 
     </header>
 
